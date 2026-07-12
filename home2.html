@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+      <link rel="stylesheet" href="./snipped12.css">
+      <style>
+        .notification {
+            position: fixed;
+            top: 60px; /* Adjust this value to your desired distance from the top */
+            left: 20px; /* Adjust this value to your desired distance from the left */
+            background-color: rgba(255, 0, 0, 0.8); /* Red color with 20% opacity */
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            z-index: 9999;
+        }
+        #backButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 9999; /* Ensure the button appears on top of other elements */
+    cursor: pointer;
+    /* Add any additional styles for your button */
+}
+      </style>
+   </head>
+   <body>
+<div class="wrapper-fdo sidebar-4yd"><span></span>
+    <div class="sidebar-8hn"><a href="./home.html" class="logo-aor"><img src="./images/home.png" class="image-9fn">
+            <span class="app-tzi"></span></a>
+        <div class="container-9tz">
+            <form>
+                <input type="hidden" name="sidebar-form" value="sidebar-form" id="sid-fwj">
+                <ul class="menu-zkn">
+                    <li class="menu-9ri">
+                        <div class="menu-68m">التسجيل وبيانات الطالب</div><a href="#"><i class="rrvfg pi-6sr pi-d5b menu-tgv"></i><span>التسجيل وبيانات الطالب</span><i class="rrvfg pi-chevron-oii"></i></a>
+                        <ul>
+                            <li><a href="#" onclick="showNotification()"><i class="rrvfg pi-6sr pi-a2x menu-tgv"></i><span>حجز الوقت الحر وموعد التسجيل</span></a></li>
+                            <li><a href="#" onclick="showNotification()"><i class="rrvfg pi-6sr table-7xq menu-tgv"></i><span>تسجيل المواد</span></a></li>
+                            <li><a href="./alghaa.html"><i class="rrvfg pi-6sr pi-c1z menu-tgv"></i><span>إلغاء طلبات فتح الشعب</span></a></li>
+                            <li><a href="#" onclick="showNotification()"><i class="rrvfg pi-6sr pi-6wq menu-tgv"></i><span>الانسحاب بدون ترصيد</span></a></li>
+                            <li><a class="icon-d58" href="#" onclick="showNotification()"><i class="rrvfg pi-6sr pi-sdo menu-tgv"></i><span>العبء الدراسي الآلي</span></a></li>
+                            <li><a href="./personal"><i class="rrvfg pi-6sr pi-hj6 menu-tgv"></i><span>بيانات الطالب الشخصية</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-to6"></li>
+                    <li class="menu-9ri">
+                        <div class="menu-68m">الطلبات الإلكترونية</div><a href="#"><i class="rrvfg pi-6sr pi-zo8 menu-tgv"></i><span>الطلبات الإلكترونية</span><i class="rrvfg pi-chevron-oii"></i></a>
+                        <ul>
+                            <li><a href="#" onclick="showNotification()"><i class="rrvfg pi-6sr pi-op5 menu-tgv"></i><span>تقديم طلب انتقال</span></a></li>
+                            <li><a href="#" onclick="showNotification()"><i class="rrvfg pi-6sr pi-file-bqz menu-tgv"></i><span>نموذج اعتماد مكان التدريب</span></a></li>
+                            <li><a href="./themmah.html"><i class="rrvfg pi-6sr pi-tci menu-tgv"></i><span>براءة الذمة للطلبة</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-to6"></li>
+                    <li class="menu-9ri">
+                        <div class="menu-68m">الاستفسارات</div><a href="#"><i class="rrvfg pi-6sr search-tnc menu-tgv"></i><span>الاستفسارات</span><i class="rrvfg pi-chevron-oii"></i></a>
+                        <ul>
+                            <li><a href="./jadwal.html"><i class="rrvfg pi-6sr pi-eg8 menu-tgv"></i><span>طباعة الجدول والقسيمة</span></a></li>
+                            <li><a href="./half.html"><i class="rrvfg pi-6sr tag-1hp menu-tgv"></i><span>نتائج منتصف الفصل</span></a></li>
+                            <li><a href="./jj"><i class="rrvfg pi-6sr chart-1cr menu-tgv"></i><span>نتائج الطالب النهائية</span></a></li>
+                            <li><a href="#" onclick="showNotification()"><i class="rrvfg pi-6sr table-7xq menu-tgv"></i><span>الجدول الدراسي</span></a></li>
+                            <li><a href="#" onclick="showNotification()"><i class="rrvfg pi-6sr search-tnc menu-tgv"></i><span>الاستفسار عن المواد المطروحة</span></a></li>
+                            <li><a href="#" onclick="showNotification()"><i class="rrvfg pi-6sr pi-op5 menu-tgv"></i><span>التخصصات المسموح الانتقال إليها</span></a></li>
+                        </ul>
+                    </li>
+                </ul><input type="hidden" name="javax.faces.ViewState" id="j_i-hoo" value="-105754562938770366:5070415319248941038">
+            </form>
+        </div>
+    </div>
+    <script>
+        function showNotification() {
+            // Create a notification element
+            var notification = document.createElement("div");
+            notification.className = "notification";
+            notification.textContent = "غير متاح حالياً"; // Notification message in Arabic
+        
+            // Append the notification to the body
+            document.body.appendChild(notification);
+        
+            // Remove the notification after a delay
+            setTimeout(function() {
+                notification.remove();
+            }, 3000); // Remove after 3 seconds
+        }
+        </script>
+    <div class="content-v2t">
+        <form>
+            <input type="hidden" name="topbar_form" value="topbar_form" id="top-r3o">
+            <div class="bar-iro">
+                <div class="bar-moo">
+                    <a class="button-o1m"> <i class="rrvfg pi-chevron-kw6"></i>
+                    </a> <span class="bar-jns"></span> <span class="vie-dls">الصفحة الرئيسية </span><a href="/regapp/secured/home.xhtml"><img src="./images/logo-dark.svg.xhtml-ln-diamond-layout" class="logo-a8m"></a>
+                </div>
+                <div class="bar-7kf">
+                    <ul class="menu-6yq">
+                        <li class="profile-o9g"><span>حامد الفتياني</span>
+                        </li>
+                        <li id="style-2Q56t" class="style-2Q56t"><button class="button-alr ui-xdv button-eyi button-e5l button-7eo" type="submit"><span class="button-pcl icon-fac rrvfg pi-qda"></span><span class="button-on5">المظهر</span></button></li>
+                        <li id="style-figE8" class="style-figE8"><button type="button" class="button-alr ui-xdv button-eyi button-e5l button-nn5"><span class="button-pcl icon-fac rrvfg pi-user-bt8"></span><span class="button-on5">ui-button</span></button></li>
+                        <li id="style-2RtkA" class="style-2RtkA"><button class="button-alr ui-xdv button-eyi button-e5l button-v8k" type="submit"><span class="button-pcl icon-fac rrvfg pi-sign-ccr"></span><span class="button-on5">خروج</span></button></li>
+                    </ul>
+                </div>
+            </div><input type="hidden" name="javax.faces.ViewState" id="j_i-7go" value="-105754562938770366:5070415319248941038">
+        </form>
+        <div class="content-cmn">
+            <form>
+                <input type="hidden" name="form" value="form" id="for-hgc">
+                <div class="grid-pxl">
+                    <div class="col-h7f">
+                        <div class="card-d5p info-co7">
+                            <h5>بيانات الطالب</h5>
+                            <div class="field-tzv grid-pxl"><label class="ui-xdv col-h7f mb-xhs">الطالب</label>
+                                <div class="col-h7f"><label class="ui-xdv">حامد سمير حامد الفتياني / 0212341 / منتظم</label>
+                                </div>
+                            </div>
+                            <div class="field-tzv grid-pxl"><label class="ui-xdv col-h7f mb-xhs">الكلية / التخصص</label>
+                                <div class="col-h7f"><label class="ui-xdv">الهندسة / الهندسة الميكانيكية</label>
+                                </div>
+                            </div>
+                            <div class="field-tzv grid-pxl"><label class="ui-xdv col-h7f mb-xhs">رقم الدفع (فواتيركم)</label>
+                                <div class="col-h7f"><label class="ui-xdv">7590212341</label>
+                                </div>
+                            </div>
+                            <div class="field-tzv grid-pxl"><label class="ui-xdv col-h7f mb-xhs">الجهة الباعثة</label>
+                                <div class="col-h7f"><label class="ui-xdv">على نفقته الخاصة</label>
+                                </div>
+                            </div>
+                            <div class="field-tzv grid-pxl"><label class="ui-xdv col-h7f mb-xhs">البريد الإلكتروني</label>
+                                <div class="col-h7f"><label class="ui-xdv">ham0212341@ju.edu.jo</label><a href="https://login.microsoftonline.com" class="link-66v ui-xdv ml-rtb">https://login.microsoftonline.com</a>
+                                </div>
+                            </div>
+                            <div class="field-tzv grid-pxl"><label class="ui-xdv col-h7f mb-xhs">مرشد الطالب</label>
+                                <div class="col-h7f"><label class="ui-xdv">د. ناصر شافع نجي الحنيطي</label>
+                                </div>
+                            </div>
+                            <div class="field-tzv grid-pxl"><label class="ui-xdv col-h7f mb-xhs">وضع الطالب</label>
+                                <div class="col-h7f">
+                                    <span class="status-a2b"></span>
+                                </div>
+                            </div>
+                            <div class="field-tzv grid-pxl"><label class="ui-xdv col-h7f mb-xhs">ملاحظات</label>
+                                <div class="col-h7f">
+                                    <span class="status-a2b"> تم تعديل سنة و/أو معدل الثانوية 24/02/2022 11:00:59</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-h7f">
+                        <div class="card-d5p info-co7">
+                            <div class="header-8jq">
+                                <h5>غيابات الطالب</h5><button class="button-alr ui-xdv button-eyi button-7eo button-oaq mr-okz mb-xhs" type="submit"><span class="button-pcl icon-fac rrvfg pi-ellipsis-e16"></span><span class="button-on5">المزيد ...</span></button>
+                            </div>
+                            <div id="for-yyo" class="table-rqo ui-xdv table-o6e table-v5o table-68q style-xJ5QB">
+                                <div class="wrapper-wz4">
+                                    <table id="style-UEB3f" class="style-UEB3f">
+                                        <thead>
+                                            <tr>
+                                                <th><span class="column-oal">اسم المادة</span></th>
+                                                <th><span class="column-oal">عدد الغيابات</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-hg1 content-mso">
+                                            <tr class="content-mso select-wpp">
+                                                <td><span class="column-oal"> </span>مقاومة مواد (1)</td>
+                                                <td><span class="column-oal"> </span>
+                                                    <div class="progress-e5i ui-xdv content-mso progress-f6r" style="height: .5rem">
+                                                        <div class="progress-f3n"></div>
+                                                        <div class="progress-co9"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="content-mso select-wpp">
+                                                <td><span class="column-oal"> </span></td>
+                                                <td><span class="column-oal"> </span>
+                                                    <div class="progress-e5i ui-xdv content-mso progress-f6r" style="height: .5rem">
+                                                        <div class="progress-f3n"></div>
+                                                        <div class="progress-co9"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="content-mso select-wpp">
+                                                <td><span class="column-oal"> </span></td>
+                                                <td><span class="column-oal"> </span>
+                                                    <div class="progress-e5i ui-xdv content-mso progress-f6r" style="height: .5rem">
+                                                        <div class="progress-f3n"></div>
+                                                        <div class="progress-co9"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="content-mso select-wpp">
+                                                <td><span class="column-oal"> </span></td>
+                                                <td><span class="column-oal"> </span>
+                                                    <div class="progress-e5i ui-xdv content-mso progress-f6r" style="height: .5rem">
+                                                        <div class="progress-f3n"></div>
+                                                        <div class="progress-co9"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="content-mso select-wpp">
+                                                <td><span class="column-oal"> </span>مقدمة في الفلسفة والتفكير الناقد</td>
+                                                <td><span class="column-oal"> </span>
+                                                    <div class="progress-e5i ui-xdv content-mso progress-f6r" style="height: .5rem">
+                                                        <div class="progress-f3n"></div>
+                                                        <div class="progress-co9"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><input id="for-8r9" name="form:j_idt79_selection" type="hidden" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-h7f">
+                        <div class="card-d5p">
+                            <div class="panel-8hw ui-xdv content-mso">
+                                <div class="title-yxy ui-helper-c7b"><span class="title-vex">المواد المسجلة</span><a href="#" class="title-p8w"><span class="icon-fac icon-ceo"></span></a></div>
+                                <div class="content-7xs content-mso" style="display:none">
+                                    <div class="table-rqo ui-xdv table-o6e table-v5o">
+                                        <div class="wrapper-wz4">
+                                            <table id="style-fvkj2" class="style-fvkj2">
+                                                <thead>
+                                                    <tr>
+                                                        <th><span class="column-oal">رقم المادة</span></th>
+                                                        <th id="for-qc9" class="style-BGS6s"><span class="column-oal">اسم المادة</span></th>
+                                                        <th><span class="column-oal">الشعبة</span></th>
+                                                        <th><span class="column-oal">شرط المادة</span></th>
+                                                        <th><span class="column-oal">طبيعة تدريس المادة</span></th>
+                                                        <th><span class="column-oal">عدد الساعات</span></th>
+                                                        <th class="column-rm4"><span class="column-oal">اليوم</span><span class="column-zly icon-fac icon-z97"></span><span class="column-79f ui-helper-okf"></span></th>
+                                                        <th class="column-rm4"><span class="column-oal">الوقت</span><span class="column-zly icon-fac icon-z97"></span><span class="column-79f ui-helper-okf"></span></th>
+                                                        <th><span class="column-oal">القاعة</span></th>
+                                                        <th><span class="column-oal">مؤشر المحاسبة</span></th>
+                                                        <th><span class="column-oal">اليوم الوجاهي</span></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="table-hg1 content-mso">
+                                                    <tr class="content-mso message-rlk">
+                                                        <td>لا يوجد سجلات.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div><input id="for-rop" name="form:courses_selection" type="hidden" value="">
+                                    </div>
+                                </div><input id="for-e9p" name="form:j_idt85_collapsed" type="hidden" value="true">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-h7f">
+                        <div class="card-d5p stud-schedule-4oz">
+                            <div class="header-8jq">
+                                <h5>طلبات الشعب المغلقة</h5><button class="button-alr ui-xdv button-eyi button-oaq mr-okz mb-xhs" type="submit"><span class="button-pcl icon-fac rrvfg pi-4yc"></span><span class="button-on5"></span></button>
+                            </div>
+                            <div id="for-5j7" class="table-rqo ui-xdv table-o6e table-v5o table-68q style-jT6x4">
+                                <div class="wrapper-wz4">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span class="column-oal">رقم المادة</span></th>
+                                                <th style="width:40%"><span class="column-oal">اسم المادة</span></th>
+                                                <th><span class="column-oal">الشعبة</span></th>
+                                                <th><span class="column-oal">حالة الطلب</span></th>
+                                                <th><span class="column-oal">تاريخ الطلب</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-hg1 content-mso">
+                                            <tr class="content-mso message-rlk">
+                                                <td>لا يوجد سجلات.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><input id="for-zoq" name="form:openrequestsdatatable_selection" type="hidden" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-h7f">
+                        <div align="center" class="card-d5p stud-schedule-4oz">
+                            <div align="center" id="style-MqFyq" class="style-MqFyq">
+                                <div><canvas id="for-pay" width="600" height="600" class="style-eQoYY"></canvas></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-h7f">
+                        <div class="card-d5p">
+                            <div class="field-tzv grid-pxl"><label class="ui-xdv col-h7f mb-xhs">هل ترغب باقتطاع 1 دينار /دولار لصالح صندوق الطالب المحتاج؟</label>
+                                <div class="col-h7f">
+                                    <div id="for-8ih" class="select-2jd ui-xdv select-so4 style-j5KIY">
+                                        <div class="ui-helper-hidden-azl"><input id="for-ljx" name="form:j_idt135_focus" type="text"></div>
+                                        <div class="ui-helper-hidden-azl"><select id="for-8ty" name="form:j_idt135_input">
+                                                <option value="1">نعم</option>
+                                                <option value="0">لا</option>
+                                            </select></div><label class="select-9a1 field-icc">لا</label>
+                                        <div class="select-e98"><span class="icon-fac"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="for-gjv" class="ui-vqk ui-xdv content-mso ui-pyc ui-dialog-cyw ui-sym ui-ops style-nTgkz">
+                        <div class="title-h64 ui-helper-c7b ui-draggable-g9q"><span class="title-hmp">تأكيد</span></div>
+                        <div class="content-la6 content-mso style-2lbUW" id="for-3zo"></div>
+                        <div class="footer-6nf content-mso">
+                            <div><button class="button-alr ui-xdv button-xa6 button-e5l success-xco mr-okz mb-xhs" type="submit"><span class="button-on5">لا يوجد تغيير</span></button><button class="button-alr ui-xdv button-xa6 button-e5l mr-okz mb-xhs" type="submit"><span class="button-on5">تغيير</span></button></div>
+                        </div>
+                        <div class="ui-resizable-1qd ui-resizable-ioo style-DRav7" id="style-DRav7"></div>
+                        <div class="ui-resizable-1qd ui-resizable-xo1 style-TBas6" id="style-TBas6"></div>
+                        <div class="ui-resizable-1qd ui-resizable-9cf style-IvOvb" id="style-IvOvb"></div>
+                        <div class="ui-resizable-1qd ui-resizable-n8x style-BHqlm" id="style-BHqlm"></div>
+                        <div class="ui-resizable-1qd ui-resizable-rg9 style-noBf5" id="style-noBf5"></div>
+                        <div class="ui-resizable-1qd ui-resizable-1la style-9z1RP" id="style-9z1RP"></div>
+                        <div class="ui-resizable-1qd ui-resizable-mhe icon-fac style-7Sxtc" id="style-7Sxtc"></div>
+                        <div class="ui-resizable-1qd ui-resizable-qgf style-UrbrU" id="style-UrbrU"></div>
+                    </div>
+                    <div id="for-zz9" class="ui-vqk ui-xdv content-mso ui-pyc ui-dialog-cyw ui-sym ui-ops style-c2UON">
+                        <div class="title-h64 ui-helper-c7b ui-draggable-g9q"><span class="title-hmp">استبانات الاحتياجات والرضا والنزاهة</span></div>
+                        <div class="content-la6 content-mso style-dCnzP" id="for-z6z"></div>
+                        <div class="footer-6nf content-mso">
+                            <div><button class="button-alr ui-xdv button-xa6 button-e5l button-7eo" type="button"><span class="button-on5">إغلاق</span></button></div>
+                        </div>
+                        <div class="ui-resizable-1qd ui-resizable-ioo style-XlAjp" id="style-XlAjp"></div>
+                        <div class="ui-resizable-1qd ui-resizable-xo1 style-I4he3" id="style-I4he3"></div>
+                        <div class="ui-resizable-1qd ui-resizable-9cf style-H4gGC" id="style-H4gGC"></div>
+                        <div class="ui-resizable-1qd ui-resizable-n8x style-YObFY" id="style-YObFY"></div>
+                        <div class="ui-resizable-1qd ui-resizable-rg9 style-jip1M" id="style-jip1M"></div>
+                        <div class="ui-resizable-1qd ui-resizable-1la style-ELb39" id="style-ELb39"></div>
+                        <div class="ui-resizable-1qd ui-resizable-mhe icon-fac style-DsfkI" id="style-DsfkI"></div>
+                        <div class="ui-resizable-1qd ui-resizable-qgf style-4oIkS" id="style-4oIkS"></div>
+                    </div>
+                </div><input type="hidden" name="javax.faces.ViewState" id="j_i-z2o" value="-105754562938770366:5070415319248941038">
+            </form>
+        </div>
+        <div class="footer-slo">
+            <div><span class="cop-lc8">برمجة وإعداد-فريق معلومات الطلبة مركز تكنولوجيا المعلومات الجامعة الاردنية © &nbsp;</span><span class="cop-lc8">2024</span>
+            </div>
+        </div>
+    </div>
+</canvas>
+   </body>
+</html>
