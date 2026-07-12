@@ -1,0 +1,115 @@
+@font-face {
+	font-family: 'Noto Kufi Arabic';
+	font-style: normal;
+	font-weight: 400;
+	/*src: url(/selfregapp/resources/fonts/NotoKufiArabic-Regular.ttf)
+		format('truetype');*/
+	src:
+		url("/regapp/javax.faces.resource/diamond-layout/fonts/NotoKufiArabic-Regular.ttf.xhtml")
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Noto Kufi Arabic';
+	font-style: normal;
+	font-weight: 700;
+	src: url("/regapp/javax.faces.resource/diamond-layout/fonts/NotoKufiArabic-Bold.ttf.xhtml")
+		format('truetype');
+}
+
+root {
+	font-size: 0.93rem !important;
+}
+
+.ui-widget, .ui-widget .ui-widget {
+	font-size: 0.93rem !important;
+}
+
+.stud-info-height {
+	min-height: 405px;
+	max-height: 405px;
+	overflow: auto;
+}
+
+body .ui-datatable .ui-datatable-header {
+	text-align: right;
+}
+
+.layout-menu ul a {
+	font-size: 0.90rem;
+}
+
+body .ui-selectonemenu .ui-selectonemenu-label {
+	background: transparent;
+	padding-right: 0.357rem;
+	padding-left: 30px;
+}
+
+.ui-spinner-button {
+	right: unset;
+	left: 0;
+}
+
+body .ui-fluid .ui-spinner .ui-spinner-input {
+	padding-right: 0.5rem;
+}
+
+body .ui-datatable .ui-datatable-data>tr .ui-row-toggler.ui-icon-circle-triangle-e:before
+	{
+	content: "\e931";
+}
+
+body .ui-accordion .ui-accordion-header > .ui-icon.ui-icon-triangle-1-e:before {
+    content: "\e931";
+}
+
+body .ui-accordion .ui-accordion-header > .ui-icon.ui-icon-triangle-1-s:before {
+    content: "\e902" !important;
+}
+
+body .ui-panel .ui-panel-titlebar .ui-panel-titlebar-icon {
+	float: left;
+}
+
+.layout-sidebar {
+	right: 0;
+}
+
+.ui-growl {
+    right: unset;
+    left: 20px;
+}
+
+@media screen and (min-width: 992px) {
+	.layout-wrapper.layout-slim .layout-content-wrapper {
+		margin-right: 7rem;
+		margin-left: 0;
+	}
+	.layout-wrapper.layout-slim .layout-menu .layout-root-menuitem>ul {
+		left: 0rem;
+		right: 6rem;
+		border-top-right-radius: 0px;
+		border-top-left-radius: 4px;
+		border-bottom-right-radius: 0px;
+		border-bottom-left-radius: 4px;
+		min-width: 18rem;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.layout-wrapper.layout-mobile-active .layout-sidebar {
+		transform: translateX(0);
+	}
+	.layout-wrapper .layout-sidebar {
+		z-index: 999;
+		box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+		transform: translateX(100%);
+	}
+}
+
+@media ( max-width : 640px) {
+	.ui-datatable-reflow .ui-datatable-data
+	td[role="gridcell"]:not(.ui-helper-hidden) {
+		text-align: right;
+	}
+}
